@@ -1,37 +1,28 @@
 # README
 
-Aplicação Teste iCasei
-Front e Backend
+Backend Test iCasei
 
 * Deployment instructions
 # For backend-app
-1. instalar ruby 2.6.2 & rails 5.2.3
-2. instalar dependências do projeto
+1. install ruby 2.6.2 & rails 5.2.3
+2. install project deps
 #> bundle install
-3. instalar postgresql
-4. incluir acesso ao db no database.yml se necessário, para development e test
-5. criar e migrar DB
+3. install postgresql
+4. add db access to database.yml if necessary, only for development and test
+5. create and migrate DB
 #> rake db:create && rake db:migrate
 6. install redis
-7. rodar servidor
-#> redis-server
+7. rodar servidor locally
+#> redis-server 
 8. update the .env file with the redis url
-9. rodar sidekiq
+9. rodar sidekiq locally
 #> bundle exec sidekiq
-10. rodar servidor web
+10. run webserver locally
 #> rails s
-11. abrir página: localhost:3000
-12. abrir página sidekiq: localhost:3000/sidekiq
-
-# For client-app
-1. instalar nodejs
-2. instalar dependências
-#> npm install
-3. rodar servidor com auto reload
-#> npm run watch
-4. abrir página: localhost:4000
+11. open webpage: localhost:3000
+12. open sidekiq webpage: localhost:3000/sidekiq
 
 * How to run the test suite
 #> rake spec
 
-# Espero que gostem, qualquer dúvida, entrem em contato: (16) 99287-9696
+# Hope you enjoy, any doubts, pls contact me: (16) 99287-9696
