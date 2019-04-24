@@ -1,0 +1,17 @@
+<h1>User Monitoring</h1>
+<table class="table">
+    <tr>
+        <th>Nome</th>
+        <th>Página Acessada</th>
+        <th>Data/Hora</th>
+    </tr>
+
+    <% @user_accesses.each do |user_accesses| %>
+        <tr>
+            <td><%= user_accesses.user.name %></td>
+            <td><%= user_accesses.url.split('/')[3].capitalize %></td>
+            <td><%= user_accesses.created_at.in_time_zone("America/Sao_Paulo").strftime("%d/%m/%Y %H:%M") %></td>
+        </tr>
+    <% end %>
+    
+</table>

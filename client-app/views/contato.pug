@@ -1,0 +1,27 @@
+extends layout
+block content
+  // Contact Section
+  section#contact
+    .container(style="padding-top: 80px;")
+      h2.text-center.text-uppercase.text-secondary.mb-0 Contato
+      hr.star-dark.mb-5
+      .row
+        .col-lg-8.mx-auto
+          // To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.
+          // The form should work on most web servers, but if the form is not working you may need to configure your web server differently.
+          form#contactForm(name='sentMessage', novalidate='novalidate')
+            .control-group
+              .form-group.floating-label-form-group.controls.mb-0.pb-2
+                input#guid.form-control(type='hidden')
+                label Nome
+                input#name.form-control(type='text', placeholder='Nome', required='required', data-validation-required-message='Please enter your name.')
+                p.help-block.text-danger
+            .control-group
+              .form-group.floating-label-form-group.controls.mb-0.pb-2
+                label Email
+                input#email.form-control(type='email', placeholder='Email', required='required', data-validation-required-message='Please enter your email address.')
+                p.help-block.text-danger
+            br
+            #success
+            .form-group
+              button#sendMessageButton.btn.btn-primary.btn-xl(type='submit') Enviar
